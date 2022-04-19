@@ -18,8 +18,7 @@ public  class Fatura {
 		this.status=status;	
 	}
 	
-	
-	
+		
 	
 public String getName() {
 	
