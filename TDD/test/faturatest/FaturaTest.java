@@ -28,7 +28,7 @@ public class FaturaTest {
     
     @Test
     public void testeGetValor() {
-        String valor = f.getValor();
+        double valor = f.getValor();
         Assertions.assertEquals(valor,7000.0);
     }
     

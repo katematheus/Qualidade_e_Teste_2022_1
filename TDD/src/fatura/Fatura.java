@@ -20,10 +20,14 @@ public  class Fatura {
 	
 		
 	
-public String getName() {
+public String getName(){
 	
 	return nome;
 }
 
+public double getValor() {
+	
+	return valor;
+}
 }
 
