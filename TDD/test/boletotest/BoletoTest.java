@@ -36,5 +36,12 @@ public class BoletoTest {
         Assertions.assertEquals(c,123456789);
     }
     
+    @Test
+    public void testeGetPago() {
+        double p = b.getPago();
+        Assertions.assertEquals(p,1500.00);
+    }
+    
+    
 
 }
