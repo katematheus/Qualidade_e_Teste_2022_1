@@ -1,5 +1,5 @@
-/test_fatura/
-/fatura/
-/faturatest/
+/processamento/
+/processatest/
 /boleto/
-/boletotest/
+/pagamento/
+/pagamentotest/
