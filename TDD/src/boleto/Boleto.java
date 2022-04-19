@@ -23,6 +23,10 @@ public Date getData() {
 	return data;	
 }
 
+public long getCod() {
+	
+	return cod;	
+}
 
 }
 
