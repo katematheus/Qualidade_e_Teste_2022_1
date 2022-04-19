@@ -37,12 +37,8 @@ public class ProcessaTest {
     }
   @Test
     public void testeSomaBol(){
-        double soma=0;
         
-       for(int i=0;i<bolets.length;i++) {
-    	   
-    	  soma+= bolets[i].getPago();
-        }
+	  double soma =proc.SomaBol();
         
         Assertions.assertEquals(soma,1500.00 );
   }

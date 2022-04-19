@@ -20,9 +20,15 @@ public  class Processamento {
 		
 	}
 	
+	/*public double SomaBol(){
+        double soma=0;
+        
+       for(int i=0;i<b.length;i++) {
+    	   
+    	  soma+= b[i].getPago();
+        }
+       return soma;
+		}*/
 	
-		
-
 }
-
 
