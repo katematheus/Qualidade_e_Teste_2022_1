@@ -30,5 +30,11 @@ public class BoletoTest {
         Assertions.assertEquals(d,emissao);
     }
     
+    @Test
+    public void testeGetCodigo() {
+        long c = b.getCod();
+        Assertions.assertEquals(c,123456789);
+    }
+    
 
 }
