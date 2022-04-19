@@ -28,5 +28,11 @@ public long getCod() {
 	return cod;	
 }
 
+public double getPago() {
+	
+	return pago;	
+}
+
+
 }
 
