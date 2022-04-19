@@ -15,12 +15,12 @@ import fatura.Fatura;
 public class FaturaTest {
 
     Fatura f;
-    Date emissao;
+    Date lancamento;
     
     @BeforeEach
     public void inicializa() {
-        emissao= new Date();
-        f = new Fatura("Kate", 7000.0,emissao,false);
+        lancamento= new Date();
+        f = new Fatura("Kate", 7000.0,lancamento,false);
     }
     @Test
     public void testeGetName() {
@@ -37,7 +37,7 @@ public class FaturaTest {
     @Test
     public void testeGetData() {
         Date d = f.getData();
-        Assertions.assertEquals(d,emissao);
+        Assertions.assertEquals(d,lancamento);
     }
     
     @Test
