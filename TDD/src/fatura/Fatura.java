@@ -35,6 +35,11 @@ public Date getData() {
 	return data;	
 }
 
+public boolean getStatus() {
+	
+	return status;	
+}
+
 
 }
 
