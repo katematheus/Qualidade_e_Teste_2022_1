@@ -40,5 +40,11 @@ public class FaturaTest {
         Assertions.assertEquals(d,emissao);
     }
     
+    @Test
+    public void testeGetStatus() {
+        boolean s = f.getStatus();
+        Assertions.assertEquals(s,false);
+    }
+    
 
 }
