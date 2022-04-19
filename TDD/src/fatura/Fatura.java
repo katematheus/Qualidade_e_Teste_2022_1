@@ -27,7 +27,12 @@ public String getName(){
 
 public double getValor() {
 	
-	return valor;
+	return valor;	
+}
+
+public Date getData() {
+	
+	return data;	
 }
 }
 
