@@ -21,7 +21,7 @@ public class FaturaTest {
         f = new Fatura("Kate", 7000.0,new Date(),false);
     }
     @Test
-    public void testeGetNome() {
+    public void testeGetName() {
         String nome = f.getName();
         Assertions.assertEquals(nome, "Kate");
     }
