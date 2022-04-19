@@ -15,13 +15,9 @@ public  class Fatura {
 		this.nome=nome;	
 		this.valor=valor;
 		this.data=data;
-		this.status=status;
-		
+		this.status=status;	
 	}
 	
-	public String getName(){
-		
-		return nome;
-	}
+
 }
 
