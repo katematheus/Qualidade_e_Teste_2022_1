@@ -26,7 +26,7 @@ public class BoletoTest {
    
     @Test
     public void testeGetData() {
-        Date d = f.getData();
+        Date d = b.getData();
         Assertions.assertEquals(d,emissao);
     }
     

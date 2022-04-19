@@ -18,8 +18,10 @@ public  class Boleto {
 		
 	}
 		
+public Date getData() {
 	
-
+	return data;	
+}
 
 }
 
