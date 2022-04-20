@@ -33,7 +33,7 @@ public class ProcessaTest {
     	b1=new Boleto (emissao,123,500);
     	b2=new Boleto (emissao,456,600);
     	b3=new Boleto (emissao,789,400);
-        fat= new Fatura("Paulo",1500.00,emissao,false);
+        fat= new Fatura("Paulo",1500.00,emissao);
         bolets.add(b1);
         bolets.add(b2);
         bolets.add(b3);
@@ -50,8 +50,8 @@ public class ProcessaTest {
   }
   @Test
   public void testeAlteraStatusFat(){
-	 
-     boolean stts = proc.alteraStatus();
+	  proc.alteraStatusFat(); 
+     boolean stts = fat.getStatus();
 	 
       Assertions.assertEquals(stts,true);
 }

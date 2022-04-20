@@ -31,6 +31,15 @@ public  class Processamento {
        return soma;
 	}
 	
+	public void  alteraStatusFat(){
+		double soma = SomaBol();
+		
+		if(soma >= f.getValor()) {
+			f.setStatus();
+		}
+		
+ }
+	
 	
 	
 }

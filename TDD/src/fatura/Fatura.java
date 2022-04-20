@@ -10,12 +10,12 @@ public  class Fatura {
 	private boolean status; 
 	
 	
-	public  Fatura (String nome,double valor, Date data,boolean status) {
+	public  Fatura (String nome,double valor, Date data) {
 		super();
 		this.nome=nome;	
 		this.valor=valor;
 		this.data=data;
-		this.status=status;	
+		this.status=false;	
 	}
 		
 	
@@ -37,6 +37,11 @@ public Date getData() {
 public boolean getStatus() {
 	
 	return status;	
+}
+
+public void setStatus () {
+	
+	this.status=true;
 }
 
 
