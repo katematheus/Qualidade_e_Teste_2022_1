@@ -59,7 +59,7 @@ public class ProcessaTest {
   @Test
   public void testeAdicionaPagamento(){
 	  proc.criaPag();
-	  int qtdpag= proc.qtdpag();
+	  int qtdpag= proc.qtdPag();
 	  
       Assertions.assertEquals(qtdpag,3);
 }

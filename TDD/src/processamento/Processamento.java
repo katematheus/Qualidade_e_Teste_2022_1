@@ -39,7 +39,21 @@ public  class Processamento {
 			f.setStatus();
 		}
 		
- }
+	}
+	public int qtdPag(){
+		return p.size();
+		}
+	
+	public void criaPag() {
+		for(int i=0;i<b.size();i++) {
+			Boleto bol=b.get(i);
+			Pagamento pag= new Pagamento(bol.getData(),"boleto",bol.getPago());
+			p.add(pag);
+			
+		}
+		
+	}
+	
 	
 	
 	
