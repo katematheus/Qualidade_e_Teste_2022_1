@@ -23,12 +23,13 @@ public class ProcessaTest {
     ArrayList<Boleto>  bolets;
     Date emissao;
     Fatura fat;
-    Pagamento pay;
+    ArrayList<Pagamento> pay;
     Processamento proc;
     
     @BeforeEach
     public void inicializa() {
     	bolets= new ArrayList<Boleto>();
+    	pay = new ArrayList<Pagamento>();
     	emissao=new Date();
     	b1=new Boleto (emissao,123,500);
     	b2=new Boleto (emissao,456,600);
@@ -37,7 +38,7 @@ public class ProcessaTest {
         bolets.add(b1);
         bolets.add(b2);
         bolets.add(b3);
-        proc= new Processamento(bolets, fat);
+        proc= new Processamento(bolets, fat,pay);
         
         
     }
@@ -54,6 +55,13 @@ public class ProcessaTest {
      boolean stts = fat.getStatus();
 	 
       Assertions.assertEquals(stts,true);
+}
+  @Test
+  public void testeAdicionaPagamento(){
+	  proc.criaPag();
+	  int qtdpag= proc.qtdpag();
+	  
+      Assertions.assertEquals(qtdpag,3);
 }
     
     

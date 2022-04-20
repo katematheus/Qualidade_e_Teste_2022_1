@@ -11,13 +11,14 @@ public  class Processamento {
 	
 	private ArrayList<Boleto> b;
 	private Fatura f; 
-	private Pagamento [] p;
+	private ArrayList<Pagamento> p;
 	
 	
-	public  Processamento (ArrayList<Boleto> b, Fatura f) {
+	public  Processamento (ArrayList<Boleto> b, Fatura f, ArrayList<Pagamento> p) {
 		super();
 		this.b=b;
-		this.f=f;	
+		this.f=f;
+		this.p=p;
 		
 	}
 	
@@ -39,6 +40,7 @@ public  class Processamento {
 		}
 		
  }
+	
 	
 	
 	
