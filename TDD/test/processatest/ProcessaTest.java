@@ -2,6 +2,7 @@ package processatest;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import org.junit.jupiter.api.Assertions;
@@ -19,7 +20,7 @@ import processamento.Processamento;
 public class ProcessaTest {
 
     Boleto b1,b2,b3;
-    Boleto [] bolets= {b1,b2,b3};
+    ArrayList<Boleto>  bolets;
     Date emissao;
     Fatura fat;
     Pagamento pay;
@@ -27,21 +28,33 @@ public class ProcessaTest {
     
     @BeforeEach
     public void inicializa() {
+    	bolets= new ArrayList<Boleto>();
     	emissao=new Date();
     	b1=new Boleto (emissao,123,500);
     	b2=new Boleto (emissao,456,600);
     	b3=new Boleto (emissao,789,400);
         fat= new Fatura("Paulo",1500.00,emissao,false);
+        bolets.add(b1);
+        bolets.add(b2);
+        bolets.add(b3);
         proc= new Processamento(bolets, fat);
+        
         
     }
   @Test
-    public void testeSomaBol(){
-        
-	  double soma =proc.SomaBol();
-        
+    public void testeAddBol(){
+	 
+        double soma = proc.SomaBol();
+	 
         Assertions.assertEquals(soma,1500.00 );
   }
+  @Test
+  public void testeAlteraStatusFat(){
+	 
+     boolean stts = proc.alteraStatus();
+	 
+      Assertions.assertEquals(stts,true);
+}
     
     
 
