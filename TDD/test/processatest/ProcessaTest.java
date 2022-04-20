@@ -31,13 +31,13 @@ public class ProcessaTest {
     	bolets= new ArrayList<Boleto>();
     	pay = new ArrayList<Pagamento>();
     	emissao=new Date();
-    	b1=new Boleto (emissao,123,500);
-    	b2=new Boleto (emissao,456,600);
-    	b3=new Boleto (emissao,789,400);
-        fat= new Fatura("Paulo",1500.00,emissao);
+    	b1=new Boleto (emissao,123,250);
+    	b2=new Boleto (emissao,456,500);
+    //	b3=new Boleto (emissao,789,250);
+        fat= new Fatura("Paulo",2000.00,emissao);
         bolets.add(b1);
         bolets.add(b2);
-        bolets.add(b3);
+       // bolets.add(b3);
         proc= new Processamento(bolets, fat,pay);
         
         
@@ -47,21 +47,21 @@ public class ProcessaTest {
 	 
         double soma = proc.SomaBol();
 	 
-        Assertions.assertEquals(soma,1500.00 );
+        Assertions.assertEquals(soma,750.00 );
   }
   @Test
   public void testeAlteraStatusFat(){
 	  proc.alteraStatusFat(); 
      boolean stts = fat.getStatus();
 	 
-      Assertions.assertEquals(stts,true);
+      Assertions.assertEquals(stts,false);
 }
   @Test
   public void testeAdicionaPagamento(){
 	  proc.criaPag();
 	  int qtdpag= proc.qtdPag();
 	  
-      Assertions.assertEquals(qtdpag,3);
+      Assertions.assertEquals(qtdpag,2);
 }
     
     
